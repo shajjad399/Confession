@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="আমাদের মুহূর্তগুলো - সুন্দর স্মৃতির ছবি এবং গল্প। আপনার প্রিয় মুহূর্তগুলি শেয়ার করুন।">
+<meta name="keywords" content="মুহূর্ত, ছবি, গ্যালারি, স্মৃতি, ফটো">
+<meta name="author" content="Confession Share">
+<meta property="og:type" content="website">
+<meta property="og:title" content="আমাদের মুহূর্তগুলো - স্মৃতির গ্যালারি">
+<meta property="og:description" content="আমাদের একসাথে কাটানো প্রতিটি বিশেষ মুহূর্ত সুন্দর ছবি এবং গল্পে।">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://your-domain-here.com/gallery.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23d9728f'>❤</text></svg>" type="image/svg+xml">
+<title>আমাদের মুহূর্তগুলো - ফটো গ্যালারি</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "আমাদের মুহূর্তগুলো",
+  "description": "আমাদের একসাথে কাটানো প্রতিটি বিশেষ মুহূর্ত সুন্দর ছবি এবং গল্পে।",
+  "url": "https://your-domain-here.com/gallery.html",
+  "inLanguage": "bn"
+}
+</script>
+<style>
+  .gallery-grid {
+    max-width: 960px;
+    margin: var(--space-4) auto var(--space-6);
+    padding: 0 var(--space-3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+  }
+  @media (max-width: 760px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .gallery-grid { grid-template-columns: 1fr; } }
+
+  .photo-frame {
+    aspect-ratio: 4/5;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(160deg, var(--bg-elev), var(--bg-elev-2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+  }
+  .photo-frame:hover { transform: translateY(-4px); border-color: var(--gold); }
+  .photo-frame img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  .placeholder-content {
+    text-align: center;
+    color: var(--muted);
+    padding: var(--space-2);
+  }
+  .placeholder-content .plus { font-size: 1.8rem; color: var(--gold-dim); display:block; margin-bottom: 0.4rem; }
+  .placeholder-content small { font-family: var(--font-accent); font-style: italic; font-size: 0.8rem; }
+
+  .caption {
+    position: absolute; left:0; right:0; bottom:0;
+    padding: var(--space-2);
+    background: linear-gradient(0deg, rgba(5,3,3,0.85), transparent);
+    font-family: var(--font-accent); font-style: italic;
+    font-size: 0.85rem; color: var(--cream);
+    opacity: 0; transition: opacity 0.4s ease;
+  }
+  .photo-frame:hover .caption { opacity: 1; }
+
+  .note {
+    max-width: 620px; margin: 0 auto var(--space-4);
+    color: var(--cream-dim); font-size: 0.95rem;
+    padding: 0 var(--space-3);
+  }
+  .next-wrap { text-align: center; margin-bottom: var(--space-6); }
+</style>
+</head>
+<body data-page="4" data-step="4">
+
+<canvas id="particles"></canvas>
+
+<main class="page">
+  <div class="section reveal">
+    <p class="eyebrow" style="justify-content:center">চতুর্থ পাতা</p>
+    <h1>আমাদের মুহূর্তগুলো</h1>
+    <div class="divider"></div>
+  </div>
+
+  <p class="note reveal">
+    নিচের ৬টা ফ্রেমে নিজেদের ছবি বসিয়ে দাও — প্রতিটা বক্সে <code>&lt;img src="তোমার-ছবি.jpg" alt="[বর্ণনা]"&gt;</code> বসালেই হবে (HTML কোডের মধ্যে কমেন্ট করা আছে কোথায় বসাতে হবে)।
+  </p>
+
+  <div class="gallery-grid">
+    <!-- প্রতিটা .photo-frame এর ভেতরে img ট্যাগ বসাও, placeholder-content মুছে দাও -->
+    <div class="photo-frame reveal">
+      <div class="placeholder-content"><span class="plus">+</span><small>প্রথম ছবি</small></div>
+      <div class="caption">[ক্যাপশন লিখো]</div>
+    </div>
+    <div class="photo-frame reveal">
+      <div class="placeholder-content"><span class="plus">+</span><small>প্রথম দেখা</small></div>
+      <div class="caption">[ক্যাপশন লিখো]</div>
+    </div>
+    <div class="photo-frame reveal">
+      <div class="placeholder-content"><span class="plus">+</span><small>প্রিয় মুহূর্ত</small></div>
+      <div class="caption">[ক্যাপশন লিখো]</div>
+    </div>
+    <div class="photo-frame reveal">
+      <div class="placeholder-content"><span class="plus">+</span><small>একসাথে হাসি</small></div>
+      <div class="caption">[ক্যাপশন লিখো]</div>
+    </div>
+    <div class="photo-frame reveal">
+      <div class="placeholder-content"><span class="plus">+</span><small>প্রিয় জায়গা</small></div>
+      <div class="caption">[ক্যাপশন লিখো]</div>
+    </div>
+    <div class="photo-frame reveal">
+      <div class="placeholder-content"><span class="plus">+</span><small>আজকের দিন</small></div>
+      <div class="caption">[ক্যাপশন লিখো]</div>
+    </div>
+  </div>
+
+  <div class="next-wrap reveal">
+    <a href="propose.html" class="btn">শেষ পাতা — সবচেয়ে গুরুত্বপূর্ণ →</a>
+  </div>
+</main>
+
+<div class="flame-mark">
+  <svg viewBox="0 0 40 40" fill="none">
+    <ellipse cx="20" cy="33" rx="11" ry="4" fill="#caa15a" opacity="0.35"/>
+    <path class="flame-core" d="M20 6c3 6-2 8-2 13a5 5 0 0010 0c0-3-2-5-2-8 3 2 5 6 5 10a11 11 0 11-22 0c0-7 6-11 11-15z" fill="url(#g1)"/>
+    <defs>
+      <linearGradient id="g1" x1="20" y1="6" x2="20" y2="29" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#f2d49b"/>
+        <stop offset="0.5" stop-color="#d9728f"/>
+        <stop offset="1" stop-color="#a8294a"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</div>
+
+<nav class="chapter-nav" aria-label="অধ্যায় নেভিগেশন">
+  <a href="index.html" data-page="1" aria-label="শুরু - প্রথম অধ্যায়"><span class="tip">শুরু</span></a>
+  <a href="story.html" data-page="2" aria-label="আমাদের গল্প - দ্বিতীয় অধ্যায়"><span class="tip">আমাদের গল্প</span></a>
+  <a href="reasons.html" data-page="3" aria-label="কারণ - তৃতীয় অধ্যায়"><span class="tip">কারণ</span></a>
+  <a href="gallery.html" data-page="4" aria-label="মুহূর্ত - চতুর্থ অধ্যায়"><span class="tip">মুহূর্ত</span></a>
+  <a href="propose.html" data-page="5" aria-label="প্রশ্ন - পঞ্চম অধ্যায়"><span class="tip">প্রশ্ন</span></a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>

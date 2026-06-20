@@ -1,0 +1,15 @@
+# Confession Share - robots.txt
+# Update 'your-domain-here.com' with your actual domain after deployment
+
+User-agent: *
+Allow: /
+Disallow: 
+
+# Sitemaps
+Sitemap: https://your-domain-here.com/sitemap.xml
+
+# Google Search Console
+# Verify your site: https://search.google.com/search-console
+
+# Bing Webmaster Tools
+# Verify your site: https://www.bing.com/webmaster/
